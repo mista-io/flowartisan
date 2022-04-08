@@ -12,7 +12,7 @@
     %meta{charset:"utf-8"}
     %meta{name:"viewport", content:"width=device-width, initial-scale=1.0"}
     %meta{name:"description", content:"{% block page-description %}{{brand.name}} lets you visually build interactive SMS applications and launch them anywhere in the world.{% endblock %}"}
-    %meta{name:"author", content:"Nyaruka Ltd"}
+    %meta{name:"author", content:"MISTA ,LLC"}
     %meta{http-equiv:"X-UA-Compatible", content:"IE=10"}
 
     -if user.is_beta
@@ -216,9 +216,10 @@
         &nbsp;
 
 
-      %a#big-logo.logo.icon-logo{href:"{% if user.is_authenticated %}{% url 'msgs.msg_inbox' %}{% else %}/{% endif %}", title:"{{brand.name}}", class:"hover:no-underline"}
+      %a#big-logo.logo{href:"{% if user.is_authenticated %}{% url 'msgs.msg_inbox' %}{% else %}/{% endif %}", title:"{{brand.name}}", class:"hover:no-underline"}
         .name
-          {{brand.name}}
+       %img{:src => "/sitestatic/brands/flowartisan/logo.png", :style => "width: 55%"}
+
 
       -block nav
         -include 'includes/nav.html'

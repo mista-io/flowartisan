@@ -38,7 +38,7 @@ class IndexView(SmartTemplateView):
 
 
 class WelcomeRedirect(RedirectView):
-    url = "/welcome"
+    url = "/login"
 
 
 class Style(SmartTemplateView):

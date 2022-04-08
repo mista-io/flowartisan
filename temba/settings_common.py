@@ -325,37 +325,37 @@ DEFAULT_PLAN = TOPUP_PLAN
 # Branding Configuration
 # -----------------------------------------------------------------------------------
 BRANDING = {
-    "rapidpro.io": {
-        "slug": "rapidpro",
-        "name": "RapidPro",
+    "flowartisan.com": {
+        "slug": "flowartisan",
+        "name": "Flow Artisan",
         "org": "UNICEF",
-        "colors": dict(primary="#0c6596"),
+        "colors": dict(primary="#5fb772"),
         "styles": ["brands/rapidpro/font/style.css"],
         "default_plan": TOPUP_PLAN,
-        "welcome_topup": 1000,
+        "welcome_topup": 500,
         "email": "join@rapidpro.io",
         "support_email": "support@rapidpro.io",
         "link": "https://app.rapidpro.io",
         "api_link": "https://api.rapidpro.io",
         "docs_link": "http://docs.rapidpro.io",
-        "domain": "app.rapidpro.io",
+        "domain": "localhost:8000",
         "ticket_domain": "tickets.rapidpro.io",
-        "favico": "brands/rapidpro/rapidpro.ico",
-        "splash": "brands/rapidpro/splash.jpg",
-        "logo": "brands/rapidpro/logo.png",
+        "favico": "brands/flowartisan/favicon.ico",
+        "splash": "brands/flowartisan/splash.jpg",
+        "logo": "brands/flowartisan/logo.svg",
         "allow_signups": True,
-        "flow_types": ["M", "V", "B", "S"],  # see Flow.FLOW_TYPES
+        "flow_types": ["M", "V", "B", "S","U"],  # see Flow.FLOW_TYPES
         "location_support": True,
         "tiers": dict(multi_user=0, multi_org=0),
         "bundles": [],
         "welcome_packs": [dict(size=5000, name="Demo Account"), dict(size=100000, name="UNICEF Account")],
         "title": _("Visually build nationally scalable mobile applications"),
         "description": _("Visually build nationally scalable mobile applications from anywhere in the world."),
-        "credits": _("Copyright &copy; 2012-2017 UNICEF, Nyaruka. All Rights Reserved."),
-        "support_widget": False,
+        "credits": _("Copyright &copy; 2022 MISTA,LLC. All Rights Reserved."),
+        "support_widget": True,
     }
 }
-DEFAULT_BRAND = os.environ.get("DEFAULT_BRAND", "rapidpro.io")
+DEFAULT_BRAND = os.environ.get("DEFAULT_BRAND", "flowartisan.com")
 
 # -----------------------------------------------------------------------------------
 # Permission Management
@@ -1125,6 +1125,7 @@ CHANNEL_TYPES = [
     "temba.channels.types.dialog360.Dialog360Type",
     "temba.channels.types.zenvia_whatsapp.ZenviaWhatsAppType",
     "temba.channels.types.twilio.TwilioType",
+    "temba.channels.types.mista.MistaType",
     "temba.channels.types.twilio_whatsapp.TwilioWhatsappType",
     "temba.channels.types.twilio_messaging_service.TwilioMessagingServiceType",
     "temba.channels.types.signalwire.SignalWireType",

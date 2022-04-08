@@ -1,6 +1,8 @@
 from django.contrib.sitemaps.views import sitemap
 from django.urls import re_path
 from django.views.decorators.csrf import csrf_exempt
+from temba.orgs.views import LoginView
+
 
 from temba.settings import DEBUG
 
@@ -22,7 +24,9 @@ from .views import (
 sitemaps = {"public": PublicViewSitemap, "video": VideoSitemap}
 
 urlpatterns = [
-    re_path(r"^$", IndexView.as_view(), {}, "public.public_index"),
+    # re_path(r"^$", IndexView.as_view(), {}, "public.public_index"),
+    re_path(r"^$", LoginView.as_view(), name="users.login"),
+
     re_path(r"^sitemap\.xml$", sitemap, {"sitemaps": sitemaps}, name="public.sitemaps"),
     re_path(r"^blog/$", Blog.as_view(), {}, "public.public_blog"),
     re_path(r"^welcome/$", Welcome.as_view(), {}, "public.public_welcome"),

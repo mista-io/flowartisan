@@ -65,3 +65,4 @@ made public even if you do not redistribute them. If you host a version of Rapid
 are hosting available for others.
 
 The software is provided under AGPL-3.0. Contributions to this project are accepted under the same license.
+# flowartisan

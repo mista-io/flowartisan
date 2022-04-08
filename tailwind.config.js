@@ -10,7 +10,7 @@ module.exports = {
             'white': '#fff',
             'error': 'rgb(var(--error-rgb))',
             'success': 'rgb(var(--success-rgb))',
-            'primary': 'rgb(var(--primary-rgb))',
+            'primary': '#1ca15c',
             'secondary': 'rgb(var(--secondary-rgb))',
             'tertiary': 'rgb(var(--tertiary-rgb))',
             'dark-alpha': {
